@@ -1,0 +1,2 @@
+public class basicTest {
+}
