@@ -28,7 +28,7 @@ public class LoginPage {
     }
 
     //This method is to click on signIn button
-    public LoginPage clickSignInButton() {
+    public LoginPage clickRegisterLink() {
         registerLink.click();
         return new LoginPage(driver);
     }

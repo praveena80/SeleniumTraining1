@@ -1,15 +1,19 @@
 package test;
 
-import org.openqa.selenium.By;
+import PageObjects.CreateAccountPage;
+import PageObjects.LoginPage;
 import org.testng.annotations.Test;
 
 public class CreateAccount extends BaseTest {
     @Test
     public void createAccount() {
+        LoginPage loginPage = new LoginPage(driver);
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
 
-        //Registering Account
-        driver.findElement(By.name("username")).sendKeys("Automation");
-        driver.findElement(By.name("password")).sendKeys("Testing");
-        driver.findElement(By.name("repeatedPassword")).sendKeys("Testing");
+        loginPage.clickSignInLink();
+        loginPage.clickRegisterLink();
+        createAccountPage.setUserName();
+        createAccountPage.setPassword();
+        createAccountPage.setRepeatPassword();
     }
 }
