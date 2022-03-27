@@ -17,17 +17,17 @@ public class basicTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         
-        driver.get("https://www.expedia.com/");
-        driver.findElement(By.linkText("Flights")).click();
-        driver.findElement(By.xpath("//*[@id=\"location-field-leg1-origin-menu\"]/div[1]/div[1]")).click();
-        driver.findElement(By.id("location-field-leg1-origin")).sendKeys("phoenix");
+//        driver.get("https://www.expedia.com/");
+//        driver.findElement(By.linkText("Flights")).click();
+//        driver.findElement(By.xpath("//*[@id=\"location-field-leg1-origin-menu\"]/div[1]/div[1]")).click();
+//        driver.findElement(By.id("location-field-leg1-origin")).sendKeys("phoenix");
 
 
-//        driver.findElement(By.xpath("//*[@id=\"app-layer-base\"]//div[2]/div/button")).click();
-////        driver.findElement(By.linkText("Sign up, it’s free")).click(); // This is not working
-//        driver.findElement(By.xpath("//*[@id=\"gc-custom-header-nav-bar-acct-menu\"]//div[1]/div/div/a[2]")).click();
-//        driver.findElement(By.id("create-account-firstname")).sendKeys("Abc Test");
-//        driver.get("https://www.amazon.com/");
+        driver.findElement(By.xpath("//*[@id=\"app-layer-base\"]//div[2]/div/button")).click();
+//        driver.findElement(By.linkText("Sign up, it’s free")).click(); // This is not working
+        driver.findElement(By.xpath("//*[@id=\"gc-custom-header-nav-bar-acct-menu\"]//div[1]/div/div/a[2]")).click();
+        driver.findElement(By.id("create-account-firstname")).sendKeys("Abc Test");
+        driver.get("https://www.amazon.com/");
 ////        Assert.assertTrue(driver.findElement(By.linkText("Enter the Store")).isDisplayed());
 //        driver.findElement(By.linkText("Enter the Store")).click();
 //        driver.findElement(By.linkText("Sign In")).click();
