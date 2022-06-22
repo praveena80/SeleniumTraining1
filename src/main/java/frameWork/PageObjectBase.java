@@ -35,9 +35,9 @@ public class PageObjectBase {
             }
         }
 //        //Other way to select dropdown
-        WebElement dropDown = driver.findElement(options);
-        Select dropDownOption = new Select(dropDown);
-        dropDownOption.selectByValue(text);
+//        WebElement dropDown = driver.findElement(options);
+//        Select dropDownOption = new Select(dropDown);
+//        dropDownOption.selectByValue(text);
     }
 
     //Selecting elements from dropdown. Pass element variable and String text
