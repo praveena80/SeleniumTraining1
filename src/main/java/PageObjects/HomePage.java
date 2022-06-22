@@ -1,12 +1,14 @@
 package PageObjects;
 
+import frameWork.PageObjectBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class HomePage extends PageObjectBase {
     WebDriver driver;
+    String a=  "test";
 
     @FindBy (linkText = "Enter the Store")
     WebElement enterStoreLink;
@@ -17,19 +19,28 @@ public class LoginPage {
     @FindBy (linkText = "Register Now!")
     WebElement registerLink;
 
-    public LoginPage (WebDriver driver) {
-        this.driver = driver;
+    public HomePage(WebDriver driver) {
+        super(driver);
+//        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void clickSignInLink() {
+    public void clickEnterStore() {
+        enterStoreLink.click();
+    }
+
+    public String getSignInText() {
+        return signInLink.getText();
+    }
+
+    public void clickEnterStoreAndSignIn() {
         enterStoreLink.click();
         signInLink.click();
     }
 
     //This method is to click on signIn button
-    public LoginPage clickRegisterLink() {
+    public HomePage clickRegisterLink() {
         registerLink.click();
-        return new LoginPage(driver);
+        return new HomePage(driver);
     }
 }
